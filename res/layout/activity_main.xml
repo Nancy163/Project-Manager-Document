@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/show_pop"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/action_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0066FF"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="内存管理"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/title_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/setting" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clean_center_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_title"
+        android:layout_centerHorizontal="true" >
+
+        <ImageView
+            android:id="@+id/clean_schedule_bg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/assist_flow_ball_green" />
+
+        <ImageView
+            android:id="@+id/clean_schedule_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/assist_clean_ball_level_green" />
+
+        <TextView
+            android:id="@+id/clean_value_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/sysclear_memory_used"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/custom_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clean_center_ball"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="运行程序太多？清理一下！"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/clean_rightnow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="立即清理" />
+
+</RelativeLayout>
